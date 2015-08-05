@@ -8,12 +8,14 @@ Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/wa
 ##How-to install
 
 1. Download and run the installer: [CopyBuffer.exe](https://s3-eu-west-1.amazonaws.com/script-exes/CopyBuffer.exe)
-2. Create your action in WatchFolder. It should have:
+2. Open WatchFolder (Start Menu -> CopyBuffer -> WatchFolder)
+2. Create your action in WatchFolder. Hit the tab "Watch List" and edit the sample. It should have:
     - The folder to watch is the directory you set in 3. i.e. C:/Users/TobiiUser/Documents/CopyBuffer
     - "Execute a program or batch or script:" - set to the C:/ProgramFiles/CopyBuffer/CopyBuffer.exe
     - Tick "Add changed object name as argument" and select "File Change - file name"
     - If you want a little notification to tell you that it successfully copied the message window text also select "Show desktop alert"
     - Hit Apply.
+    - Hit "Watch List" and press start on the top sample.
     - Hit Tray
 
     ![Imgur](http://i.imgur.com/xI45ZaCm.png)
