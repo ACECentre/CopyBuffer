@@ -10,8 +10,8 @@ Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/wa
 1. Download and run the installer: [CopyBuffer.exe](https://s3-eu-west-1.amazonaws.com/script-exes/CopyBuffer.exe)
 2. Open WatchFolder (Start Menu -> CopyBuffer -> WatchFolder)
 2. Create your action in WatchFolder. Hit the tab "Watch List" and edit the sample. It should have:
-    - The folder to watch is the directory you set in 3. i.e. C:/Users/TobiiUser/Documents/CopyBuffer
-    - "Execute a program or batch or script:" - set to the C:/ProgramFiles/CopyBuffer/CopyBuffer.exe
+    - The folder to watch is the directory you set in 3. i.e. C:/Users/TobiiUser/Documents/CopyBuffer/WatchFolder
+    - "Execute a program or batch or script:" - set to the C:/ProgramFiles/CopyBuffer/CopyBuffer.exe (It should just appear!)
     - Tick "Add changed object name as argument" and select "File Change - file name"
     - If you want a little notification to tell you that it successfully copied the message window text also select "Show desktop alert"
     - Hit Apply.
@@ -29,4 +29,3 @@ Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/wa
 ##Notes
 
 1. This is a 32 bit build ready for Tobii iSeries devices. IT *WON'T* run on 64 bit machines.
-2. The installer writes registry keys to "Run" the WatchFolder application at boot. I haven't written a delete for the registry keys yet!

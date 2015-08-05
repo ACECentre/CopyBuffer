@@ -47,6 +47,8 @@ Section "CopyBuffer (required)"
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   CreateDirectory "$DOCUMENTS\CopyBuffer\WatchFolder"
+  FileOpen $0 "$DOCUMENTS\CopyBuffer\WatchFolder\CopyBuffer.txt" w
+  FileClose $0
 
   InitPluginsDir
   NSISdl::download http://leelusoft.altervista.org/alterpages/files/W4F25Free.zip "$PLUGINSDIR\W4F25Free.zip"
@@ -67,8 +69,9 @@ Section "CopyBuffer (required)"
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\CopyBuffer "Install_Dir" "$INSTDIR"
   ; Write the Run commands
-  WriteRegStr HKLM “Software\Microsoft\Windows\CurrentVersion\Run” “WatchFolder” “$INSTDIR\W4F25.exe”
-  WriteRegStr HKCU “Software\Microsoft\Windows\CurrentVersion\Run” “WatchFolder” “$INSTDIR\W4F25.exe”
+  ;WriteRegStr HKLM “Software\Microsoft\Windows\CurrentVersion\Run” “WatchFolder” “$INSTDIR\W4F25.exe”
+  ;WriteRegStr HKCU “Software\Microsoft\Windows\CurrentVersion\Run” “WatchFolder” “$INSTDIR\W4F25.exe”
+  CreateShortCut “$SMSTARTUP\W4F25.lnk” “$INSTDIR\W4F25.exe”
 
   ; Write the uninstall keys for Windows
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\CopyBuffer" "DisplayName" "NSIS CopyBuffer"
@@ -100,6 +103,7 @@ Section "Uninstall"
   DeleteRegKey HKLM SOFTWARE\NSIS_CopyBuffer
   ;DeleteRegKey HKLM “Software\Microsoft\Windows\CurrentVersion\Run” “WatchFolder”
   ;DeleteRegKey HKCU “Software\Microsoft\Windows\CurrentVersion\Run” “WatchFolder”
+  Delete “$SMSTARTUP\W4F25.lnk”
 
   ; Remove files and uninstaller
   Delete $INSTDIR\CopyBuffer.nsi
