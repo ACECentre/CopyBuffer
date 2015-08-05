@@ -20,7 +20,7 @@ Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/wa
 
     ![Imgur](http://i.imgur.com/xI45ZaCm.png)
 
-3. In Compass you now need to create an action. You can copy and paste the following text if you wish - but do remember to use the same file paths as mentioned above:
+3. In Compass you now need to create an action. You will find the action "WriteTextToFile" which is in "System". After you choose the file you need to choose where it gets the text from. Hit the blue function button to access the GetMessageWindowText() function. You can copy and paste the following text if you wish - but do remember to use the same file paths as mentioned above:
     ``WriteTextToFile("C:\Users\TobiiUser\Documents\CopyBuffer\CompassCopy.txt",GetMessageWindowText(),FALSE)``
 
     ![Imgur](http://i.imgur.com/gHEFZ1Fm.png)
@@ -29,3 +29,4 @@ Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/wa
 ##Notes
 
 1. This is a 32 bit build ready for Tobii iSeries devices. IT *WON'T* run on 64 bit machines.
+2. Dear Tobii. Please fix. (NB: The main code uses pyperclip - a cross platform paperclip library ;) )
