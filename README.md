@@ -23,8 +23,8 @@ Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/wa
 3. In Compass you now need to create an action. You can copy and paste the following text if you wish - but do remember to use the same file paths as mentioned above:
     ``WriteTextToFile("C:\Users\TobiiUser\Documents\CopyBuffer\CompassCopy.txt",GetMessageWindowText(),FALSE)``
 
-    ![Imgur](http://i.imgur.com/wAf1gDOm.png)
     ![Imgur](http://i.imgur.com/gHEFZ1Fm.png)
+    ![Imgur](http://i.imgur.com/wAf1gDOm.png)
 
 ##Notes
 
