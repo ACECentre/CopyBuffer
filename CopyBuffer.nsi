@@ -112,6 +112,8 @@ Section "Uninstall"
   Delete "$INSTDIR\*.zip"
   Delete "$INSTDIR\*.dll"
   Delete "$INSTDIR\*.exe"
+  Delete "$INSTDIR\*.txt"
+  Delete "$INSTDIR\*.pdf"
 
   ; Remove shortcuts, if any
   Delete "$SMPROGRAMS\CopyBuffer\*.*"
