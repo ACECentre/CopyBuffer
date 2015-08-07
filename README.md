@@ -3,7 +3,7 @@ CopyBuffer
 
 This is a small app that reads a text file and copies the entry of the text file to the copy buffer of windows.
 
-Use it in conjunction with [WatchFolder](http://leelusoft.blogspot.in/2011/10/watch-4-folder-23.html) and Dynavox Compass Software to get around the lack of computer control currently existing in Compass.
+It uses [WatchFolder](http://leelusoft.blogspot.in/2011/10/watch-4-folder-23.html) to get around the lack of Copy() function in Tobii Dynavox Compass Software.
 
 ##How-to install
 
