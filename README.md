@@ -8,7 +8,7 @@ It uses [WatchFolder](http://leelusoft.blogspot.in/2011/10/watch-4-folder-23.htm
 ##How-to install
 
 1. Download and run the installer: [CopyBuffer.exe](https://s3-eu-west-1.amazonaws.com/script-exes/CopyBuffer.exe)
-2. Open WatchFolder (Start Menu -> CopyBuffer -> WatchFolder)
+2. Open WatchFolder (Start Menu -> CopyBuffer -> WatchFolder). Hit minimise (Tray)
 3. In Compass you now need to create an action. You will find the action "WriteTextToFile" which is in "System". After you choose the file you need to choose where it gets the text from. Hit the blue function button to access the GetMessageWindowText() function. You can copy and paste the following text if you wish - but do remember to use the same file paths as mentioned above:
     ``WriteTextToFile("C:\Users\TobiiUser\Documents\CopyBuffer\CompassCopy.txt",GetMessageWindowText(),FALSE)``
 
