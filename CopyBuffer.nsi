@@ -65,6 +65,28 @@ Section "CopyBuffer (required)"
   ; Put file there
   File "CopyBuffer.nsi"
   File "Parts\*"
+  ; Put W4F25 config file in place
+  ; Now rewrite the settings file with links to the proper place
+  ClearErrors
+  FileOpen $0 "settings.cfg" "r"     ; open target file for reading
+  GetTempFileName $R0                            ; get new temp file name
+  FileOpen $1 $R0 "w"                            ; open temp file for writing
+  loop:
+     FileRead $0 $2                              ; read line from target file
+     IfErrors done                               ; check if end of file reached
+     StrCmp $2 "path=$\r$\n" 0 +2      ; compare line with search string with CR/LF
+        StrCpy $2 "path=$DOCUMENTS\CopyBuffer\WatchFolder\$\r$\n"    ; change line
+     StrCmp $2 "path=" 0 +2            ; compare line with search string without CR/LF (at the end of the file)
+        StrCpy $2 "path=$DOCUMENTS\CopyBuffer\WatchFolder\"          ; change line
+     FileWrite $1 $2                             ; write changed or unchanged line to temp file
+     Goto loop
+ 
+  done:
+     FileClose $0                                ; close target file
+     FileClose $1                                ; close temp file
+     Delete "settings.cfg"                           ; delete target file
+     CopyFiles /SILENT $R0 "$TEMP\W4F25\settings.cfg"            ; copy temp file to target file
+     Delete $R0                                  ; delete temp file
 
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\CopyBuffer "Install_Dir" "$INSTDIR"
