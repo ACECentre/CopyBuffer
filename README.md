@@ -5,7 +5,7 @@ This is a small app that reads a text file and copies the entry of the text file
 
 It's a (very) small python script that reads the contents of a text file and puts it into the operating systems copy buffer. To make this all work nicely Dynavox Compass needs to write to a text file - and that text file is monitored by a application called [WatchFolder](http://leelusoft.blogspot.in/2011/10/watch-4-folder-23.html). Its a bit messy but once its setup it should be reliable!!
 
-##How-to install
+## How-to install
 
 1. Download and run the installer: [CopyBuffer.exe](https://s3-eu-west-1.amazonaws.com/script-exes/CopyBuffer.exe)
 2. Open WatchFolder (Start Menu -> CopyBuffer -> WatchFolder). Hit minimise (Tray)
@@ -21,7 +21,7 @@ So your whole action should be:
 
 4. Create a shortcut to "WatchFolder" to your startup folder of windows. (For some reason the installer isn't creating this shortcut reliably..)
 
-##Notes
+## Notes
 
 1. This is a 32 bit build ready for Tobii iSeries devices. IT *WON'T* run on 64 bit machines.
 2. Dear Tobii. Please fix Copy() and Paste() functionality :)
